@@ -6,7 +6,7 @@
     --accent-color: rgba(59, 130, 246, 0.1);
     --card-bg-color: rgb(24, 25, 30);
     --card-hover-color: rgb(44, 45, 51);
-    --transition-speed: 0.3s;
+    --transition-speed: 0.5s;
     --padding-section: 5%;
 }
 
@@ -62,7 +62,7 @@ body {
 
 .nav-links a:hover {
     color: var(--primary-color);
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .nav-links a.active {
@@ -172,7 +172,7 @@ body {
 }
 
 .proyecto-card:hover .proyecto-img img {
-    transform: scale(1.1);
+    transform: scale(1.2);
     cursor: pointer;
 }
 
