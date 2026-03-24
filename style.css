@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #020617;
+    --text-color: #f1f5f9;
+    --text-color-secondary: #94a3b8;
+    --primary-color: #3b82f6;
+    --secondary-color: #1d4ed8;
+    --accent-color: rgba(59, 130, 246, 0.1);
+    --card-bg-color: rgb(24, 25, 30);
+    --card-hover-color: rgb(44, 45, 51);
+    --transition-speed: 0.3s;
+    --padding-section: 5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    background-color: var(--bg-color);
+
+}
+
+.header a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar {
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid var(--card-hover-color);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem var(--padding-section);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    list-style: none;
+    text-decoration: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 1.2rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* content */
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0rem var(--padding-section);
+
+}
+
+.proyectos h2 {
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.proyectos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .proyectos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .proyectos-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.proyecto-card {
+    background-color: var(--card-bg-color);
+    border-radius: 10px;
+    transition: all var(--transition-speed) ease;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px -10px;
+}
+
+.proyecto-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.proyecto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all var(--transition-speed) ease;
+
+}
+
+.proyecto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.proyecto-card h3 {
+    transition: all var(--transition-speed) ease;
+}
+
+.proyecto-card:hover {
+    background-color: var(--card-hover-color);
+    cursor: pointer;
+}
+
+.proyecto-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.proyecto-card:hover .proyecto-img img {
+    transform: scale(1.1);
+
+}
+
+.proyecto-card button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.proyecto-card button:hover {
+    background-color: var(--secondary-color);
+
+}
+
+
+
+.proyecto-card p {
+    font-size: 0.95rem;
+    color: var(--text-color-secondary);
+}
+
+.proyecto-card a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.proyecto-card a:hover {
+    color: var(--secondary-color);
+}
+
+footer {
+    padding: 0rem var(--padding-section);
+    margin: 2rem auto;
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid var(--card-hover-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}

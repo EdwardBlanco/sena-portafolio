@@ -1,0 +1,26 @@
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #1d4ed8;
+    --transition-speed: 0.3s;
+}
+
+.volver {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.volver:hover {
+    background-color: var(--secondary-color);
+    opacity: 1;
+}
