@@ -19,14 +19,11 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
     color: var(--text-color);
+    background: #041333;
+    background: radial-gradient(circle, rgba(4, 19, 51, 1) 0%, rgba(2, 6, 23, 1) 100%);
 }
 
-.header {
-    background-color: var(--bg-color);
-
-}
 
 .header a {
     color: var(--text-color);
