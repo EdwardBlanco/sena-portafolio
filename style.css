@@ -153,7 +153,6 @@ body {
 
 .proyecto-card:hover {
     background-color: var(--card-hover-color);
-    cursor: pointer;
 }
 
 .proyecto-card:hover h3 {
@@ -162,7 +161,7 @@ body {
 
 .proyecto-card:hover .proyecto-img img {
     transform: scale(1.1);
-
+    cursor: pointer;
 }
 
 .proyecto-card button {
@@ -180,8 +179,6 @@ body {
     background-color: var(--secondary-color);
 
 }
-
-
 
 .proyecto-card p {
     font-size: 0.95rem;
