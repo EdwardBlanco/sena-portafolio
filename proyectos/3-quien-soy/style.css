@@ -1,60 +1,104 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* border: 1px solid blue; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+  font-size: 1.2rem;
 }
 
-body{
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.limpiador {
+  clear: both;
+}
+main{
+  margin-top: 90px;
+}
+
+button {
+  background-color: orangered;
+  padding: 15px 25px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(173, 173, 173);
 }
 
 .seccion {
   padding: 20px 0px;
 }
-.seccion-contenido{
-  width: 70%;
+
+.seccion-contenido {
+  width: 82%;
   margin: 0 auto;
 }
-#header{
-  background-color: orangered;
+
+/* header  */
+
+#header {
+  background-color: #363941;
   color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 90px;
 }
-#header-tabla{
+
+#header-tabla {
   width: 100%;
 }
 
-#header table{
+#header table {
   border-spacing: 10px;
   border-collapse: separate;
 }
 
-#menu{
+#menu {
   float: right;
 }
 
-#menu p{
-  float: left;
-  margin: 0  10px ;
+#menu a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 10px;
+}
+
+#menu a:nth-child(1) {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 10px;
 }
 
 /* #seccion-quien-soy */
 
-#seccion-quien-soy table{
-
-  margin: 0 auto;
-  width: 800px;
+.hero-img {
+  width: 650px;
+  float: left;
+  margin-right: 130px;
+  margin-left: 60px;
 }
 
-#seccion-quien-soy table td{
-  border-left: 40px solid transparent;
+.hero-img img {
+  width: 100%;
 }
+
+.hero-info {
+  padding: 100px 65px;
+}
+
 
 #seccion-quien-soy h2 {
-  font-size: 60px;
+  font-size: 4.5rem;
   color: orangered;
-  text-align: center
+  margin-bottom: 10px;
+
+}
+#seccion-quien-soy p {
+  color: rgb(100, 100, 100);
+  margin-bottom: 15px;
+
 }
 
 /* #seccion-descripcion  */
@@ -64,15 +108,28 @@ body{
   text-align: center;
 }
 
-#seccion-descripcion-contenido > * {
-  margin: 20px 0px;
+
+#descripcion-img {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-#seccion-descripcion img{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+#seccion-descripcion-contenido p{
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
 
+#seccion-descripcion img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+#firma{
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #descripcion {
@@ -82,57 +139,58 @@ body{
 /* #seccion-proyectos */
 #seccion-proyectos {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-#seccion-proyectos h2{
-  margin: 20px 0
+#seccion-proyectos h2 {
+  margin-top: 20px;
+  font-size: 4rem;
+  color: rgb(80, 80, 80);
+  margin-bottom: 40px;
 }
 
-
-.seccion-proyectos-columna{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.seccion-proyectos-columna {
+  border: 2px solid rgba(173, 173, 173, 0.3);
+  border-radius: 5px;
 }
 
 #seccion-proyectos table td {
-   border-left: 20px solid transparent;
-   border-top: 20px solid transparent;
+  border-left: 40px solid transparent;
+  border-top: 20px solid transparent;
 }
 
 #seccion-proyectos table td:first-child {
-   border-left: 0;
+  border-left: 0;
 }
 
 #seccion-proyectos table tr:first-child td {
-   border-top: 0;
+  border-top: 0;
 }
 
-#seccion-proyectos img{
+#seccion-proyectos img {
   width: 100%;
 }
 
-.seccion-proyectos-info{
+.seccion-proyectos-info {
   padding: 20px;
 }
 
-.seccion-proyectos-info > *{
-  margin: 10px;
+.seccion-proyectos-info h3{
+  font-size: 1.5rem;
+  color: #363941;
+  margin-bottom: 10px;
+  font-weight: 400;
 }
-
-
-button{
-  background-color: orangered;
-  padding: 10px 20px;
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  border: 1px solid rgb(173, 173, 173);
+.seccion-proyectos-info p {
+  margin-bottom: 20px;
 }
 
 
 /* footer */
 
 footer {
- background-color: rgb(119, 119, 119);
- color:aliceblue;
+  background-color: #363941;
+  color: aliceblue;
 }
 
 #copyright {
