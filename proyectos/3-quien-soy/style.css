@@ -71,21 +71,25 @@ button {
   margin: 0 10px;
 }
 
-/* #seccion-quien-soy */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
 .hero-img {
-  width: 650px;
-  float: left;
-  margin-right: 130px;
-  margin-left: 60px;
+  flex: 1;
+  max-width: 600px;
 }
 
 .hero-img img {
   width: 100%;
+  display: block;
 }
 
 .hero-info {
-  padding: 100px 65px;
+  flex: 1;
+  padding: 40px 0;
 }
 
 
@@ -196,3 +200,163 @@ footer {
 #copyright {
   text-align: right;
 }
+
+/* Responsividad */
+
+/* Tablets y Laptops Pequeñas (1024px) */
+@media (max-width: 1024px) {
+  .seccion-contenido {
+    width: 90%;
+  }
+
+  .hero {
+    gap: 20px;
+  }
+
+  .hero-img {
+    max-width: 450px;
+  }
+
+  .hero-info {
+    padding: 20px 0;
+  }
+
+  #seccion-quien-soy h2 {
+    font-size: 3.5rem;
+  }
+
+  #seccion-proyectos h2 {
+    font-size: 3.5rem;
+  }
+
+  /* 2 columnas para proyectos en tablet */
+  #seccion-proyectos table {
+    display: block;
+  }
+
+  #seccion-proyectos tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #seccion-proyectos td {
+    display: block;
+    width: 48%; /* Casi 50% para 2 columnas */
+    margin: 1%;
+    border: 0 !important;
+  }
+}
+
+/* Tablets (768px) */
+@media (max-width: 768px) {
+  main {
+    margin-top: 150px;
+  }
+
+  #header {
+    height: auto;
+    position: fixed;
+    top: 0;
+  }
+
+  .volver {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  #header-tabla tr, #header-tabla td {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  #nombre {
+    margin-top: 30px;
+  }
+
+  #menu {
+    float: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-info {
+    padding: 20px 0;
+  }
+
+  #seccion-quien-soy h2 {
+    font-size: 3rem;
+  }
+
+  #seccion-descripcion img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #seccion-descripcion-contenido p {
+    font-size: 1.5rem;
+  }
+
+  /* Proyectos: 1 columna en móvil */
+  #seccion-proyectos td {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  #seccion-proyectos h2 {
+    font-size: 3rem;
+  }
+
+  #copyright {
+    text-align: center;
+  }
+}
+
+/* Móviles (480px) */
+@media (max-width: 480px) {
+  main {
+    margin-top: 180px;
+  }
+
+  #seccion-quien-soy h2 {
+    font-size: 2.2rem;
+  }
+
+  #menu a {
+    display: inline-block; /* Inline block instead of block to save space if possible, or stack if too many */
+    margin: 5px 10px;
+    font-size: 1rem;
+  }
+
+  #seccion-descripcion img {
+    width: 200px;
+    height: 200px;
+  }
+
+  #seccion-descripcion-contenido p {
+    font-size: 1.2rem;
+  }
+
+  #descripcion {
+    font-size: 1.1rem !important;
+  }
+
+  #seccion-proyectos h2 {
+    font-size: 2.2rem;
+  }
+}
