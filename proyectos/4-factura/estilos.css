@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.contenedor-factura {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabecera Oscura */
+.seccion-oscura {
+    background: #252b33;
+    color: white;
+    padding: 40px 50px;
+}
+
+.fila-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono {
+    background: white;
+    color: #252b33;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.logo-marca h1 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.logo-marca p {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.texto-rojo {
+    color: #ff3b4e;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.linea-roja {
+    height: 5px;
+    background: #ff3b4e;
+    margin: 0 -50px 30px;
+}
+
+.fila-cliente {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.cliente h3 {
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.cliente p {
+    line-height: 1.4;
+}
+
+.metadatos {
+    display: flex;
+    gap: 30px;
+    font-size: 1rem;
+}
+
+.metadatos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.metadatos-factura {
+    font-weight: bold;
+}
+
+/* Tabla */
+
+.cuerpo {
+    padding: 0px 50px 40px 50px;
+    flex-grow: 1;
+    margin-bottom: 40px;
+}
+
+.tabla {
+    background: white
+}
+
+.tabla-cabecera,
+.tabla-fila {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 60px 100px;
+    padding: 24px 15px;
+    align-items: center;
+}
+
+.tabla-cabecera {
+    background: #f1f4f3;
+    font-weight: bold;
+    color: #444;
+    padding: 40px 70px;
+}
+
+.tabla-fila {
+    border-bottom: 4px solid #eee;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.tabla-fila span:nth-child(3),
+.tabla-fila span:nth-child(4),
+.tabla-fila span:nth-child(5) {
+    text-align: right;
+}
+
+.tabla-cabecera span:nth-child(3),
+.tabla-cabecera span:nth-child(4),
+.tabla-cabecera span:nth-child(5) {
+    text-align: right;
+}
+
+/* Pie de Página */
+.pie {
+    padding: 0 50px 30px;
+}
+
+.pie-superior {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    border-top: 4px solid #eee;
+    padding-top: 30px;
+}
+
+.info-pago {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.info-pago h4 {
+    margin: 10px 0 5px;
+    color: #222;
+}
+
+.totales {
+    width: 220px;
+    font-size: 0.9rem;
+}
+
+.totales p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
+    font-weight: bold;
+    color: #ff3b4e;
+    font-size: 1.2rem;
+}
+
+.pie-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.terminos {
+    width: 60%;
+    font-size: 0.7rem;
+    color: #888;
+    line-height: 1.4;
+}
+
+.firma {
+    text-align: center;
+    width: 180px;
+}
+
+.raya {
+    border-top: 1px solid #333;
+    margin-bottom: 8px;
+}
+
+.firma p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.base-negra {
+    height: 15px;
+    background: #252b33;
+    margin-top: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+    .seccion-oscura,
+    .cuerpo,
+    .pie {
+        padding: 30px;
+    }
+
+    .linea-roja {
+        margin: 0 -30px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .fila-superior,
+    .fila-cliente,
+    .pie-superior,
+    .pie-inferior {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tabla-cabecera,
+    .tabla-fila {
+        grid-template-columns: 1fr 80px;
+    }
+
+    .tabla-cabecera span:nth-child(1),
+    .tabla-cabecera span:nth-child(3),
+    .tabla-cabecera span:nth-child(4),
+    .tabla-fila span:nth-child(1),
+    .tabla-fila span:nth-child(3),
+    .tabla-fila span:nth-child(4) {
+        display: none;
+    }
+
+    .totales,
+    .terminos {
+        width: 100%;
+    }
+}
