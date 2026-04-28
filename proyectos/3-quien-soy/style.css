@@ -65,12 +65,6 @@ button {
   margin: 0 10px;
 }
 
-.hero {
-  /* display: flex; REMOVED */
-  /* align-items: center; REMOVED */
-  /* gap: 40px; REMOVED */
-}
-
 .hero-img {
   float: left;
   width: 45%;
@@ -201,14 +195,9 @@ footer {
 
 /* Responsividad */
 
-/* Tablets y Laptops Pequeñas (1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .seccion-contenido {
     width: 90%;
-  }
-
-  .hero {
-    /* gap: 20px; REMOVED */
   }
 
   .hero-img {
@@ -227,25 +216,18 @@ footer {
     font-size: 3.5rem;
   }
 
-  /* 2 columnas para proyectos en tablet */
   #seccion-proyectos table {
     width: 100%;
-  }
-
-  #seccion-proyectos tr {
-    /* overflow: hidden to contain floats if needed */
   }
 
   #seccion-proyectos td {
     float: left;
     width: 48%;
-    /* Casi 50% para 2 columnas */
     margin: 1%;
     border: 0 !important;
   }
 }
 
-/* Tablets (768px) */
 @media (max-width: 768px) {
   main {
     margin-top: 0;
@@ -312,7 +294,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* Proyectos: 1 columna en móvil */
   #seccion-proyectos td {
     width: 100%;
     margin: 0 auto 20px auto;
@@ -327,7 +308,6 @@ footer {
   }
 }
 
-/* Móviles (480px) */
 @media (max-width: 480px) {
   main {
     margin-top: 0;
