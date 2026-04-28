@@ -13,9 +13,6 @@ body {
 .limpiador {
   clear: both;
 }
-main{
-  margin-top: 90px;
-}
 
 button {
   background-color: orangered;
@@ -39,10 +36,7 @@ button {
 #header {
   background-color: #363941;
   color: #fff;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1000;
   height: 90px;
 }
 
@@ -56,7 +50,7 @@ button {
 }
 
 #menu {
-  float: right;
+  text-align: right;
 }
 
 #menu a {
@@ -72,23 +66,25 @@ button {
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  /* display: flex; REMOVED */
+  /* align-items: center; REMOVED */
+  /* gap: 40px; REMOVED */
 }
 
 .hero-img {
-  flex: 1;
+  float: left;
+  width: 45%;
   max-width: 600px;
 }
 
 .hero-img img {
   width: 100%;
-  display: block;
+  float: left;
 }
 
 .hero-info {
-  flex: 1;
+  float: right;
+  width: 50%;
   padding: 40px 0;
 }
 
@@ -99,6 +95,7 @@ button {
   margin-bottom: 10px;
 
 }
+
 #seccion-quien-soy p {
   color: rgb(100, 100, 100);
   margin-bottom: 15px;
@@ -118,7 +115,7 @@ button {
   margin-bottom: 30px;
 }
 
-#seccion-descripcion-contenido p{
+#seccion-descripcion-contenido p {
   font-size: 2rem;
   margin-bottom: 15px;
 }
@@ -129,7 +126,7 @@ button {
   border-radius: 50%;
 }
 
-#firma{
+#firma {
   font-style: italic;
   font-size: 1.3rem;
   margin-bottom: 20px;
@@ -179,12 +176,13 @@ button {
   padding: 20px;
 }
 
-.seccion-proyectos-info h3{
+.seccion-proyectos-info h3 {
   font-size: 1.5rem;
   color: #363941;
   margin-bottom: 10px;
   font-weight: 400;
 }
+
 .seccion-proyectos-info p {
   margin-bottom: 20px;
 }
@@ -210,7 +208,7 @@ footer {
   }
 
   .hero {
-    gap: 20px;
+    /* gap: 20px; REMOVED */
   }
 
   .hero-img {
@@ -231,18 +229,17 @@ footer {
 
   /* 2 columnas para proyectos en tablet */
   #seccion-proyectos table {
-    display: block;
+    width: 100%;
   }
 
   #seccion-proyectos tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* overflow: hidden to contain floats if needed */
   }
 
   #seccion-proyectos td {
-    display: block;
-    width: 48%; /* Casi 50% para 2 columnas */
+    float: left;
+    width: 48%;
+    /* Casi 50% para 2 columnas */
     margin: 1%;
     border: 0 !important;
   }
@@ -251,27 +248,25 @@ footer {
 /* Tablets (768px) */
 @media (max-width: 768px) {
   main {
-    margin-top: 150px;
+    margin-top: 0;
   }
 
   #header {
     height: auto;
-    position: fixed;
-    top: 0;
   }
 
   .volver {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    float: left;
+    margin: 10px;
     font-size: 0.8rem;
     padding: 5px 10px;
   }
 
-  #header-tabla tr, #header-tabla td {
-    display: block;
-    text-align: center;
+  #header-tabla tr,
+  #header-tabla td {
+    float: left;
     width: 100%;
+    text-align: center;
     padding: 5px 0;
   }
 
@@ -286,8 +281,13 @@ footer {
   }
 
   .hero {
-    flex-direction: column;
     text-align: center;
+  }
+
+  .hero-img,
+  .hero-info {
+    width: 100%;
+    float: none;
   }
 
   .hero-img {
@@ -330,7 +330,7 @@ footer {
 /* Móviles (480px) */
 @media (max-width: 480px) {
   main {
-    margin-top: 180px;
+    margin-top: 0;
   }
 
   #seccion-quien-soy h2 {
@@ -338,7 +338,7 @@ footer {
   }
 
   #menu a {
-    display: inline-block; /* Inline block instead of block to save space if possible, or stack if too many */
+    /* float: left; REMOVED to keep horizontal */
     margin: 5px 10px;
     font-size: 1rem;
   }
@@ -359,4 +359,4 @@ footer {
   #seccion-proyectos h2 {
     font-size: 2.2rem;
   }
-}
+}
