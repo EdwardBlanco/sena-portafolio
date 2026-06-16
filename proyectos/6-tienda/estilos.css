@@ -230,21 +230,6 @@ button {
   background: linear-gradient(135deg, #00a8ff, #1b1464);
 }
 
-.hero-watermark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 100px;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.12);
-  letter-spacing: 6px;
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
-  font-family: inherit;
-}
 
 .hero-articulo img {
   width: 90%;
@@ -337,14 +322,6 @@ button {
   background: #fec107;
 }
 
-.promo-badge {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.85;
-}
-
 .img-wrapper {
   position: relative;
   width: 100%;
@@ -361,26 +338,6 @@ button {
 
 .promocion:hover img {
   transform: translateY(-5px);
-}
-
-.glow-badge {
-  position: absolute;
-  right: 15%;
-  bottom: 12%;
-  background: #000;
-  color: #39ff14; /* bright neon green */
-  font-family: inherit;
-  font-weight: 800;
-  font-size: 8px;
-  line-height: 1.3;
-  letter-spacing: 0.5px;
-  padding: 5px 6px;
-  border: 1px solid #39ff14;
-  border-radius: 0px;
-  text-align: center;
-  transform: rotate(-10deg);
-  z-index: 5;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .promocion button {
@@ -446,7 +403,8 @@ button {
   transition: color 0.3s;
 }
 
-.filtros li:hover, .filtros li.activo {
+.filtros li:hover,
+.filtros li.activo {
   color: #f5a623;
 }
 
@@ -509,13 +467,13 @@ button {
   font-weight: 700;
   letter-spacing: 1.5px;
   transition: all 0.3s;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cargar-mas:hover {
   background: #f5a623;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 /* INSTAGRAM */
@@ -781,10 +739,6 @@ button {
     height: 380px;
   }
 
-  .hero-watermark {
-    font-size: 70px;
-  }
-
   .promociones {
     grid-template-columns: 1fr;
   }
@@ -813,8 +767,8 @@ button {
     padding: 10px;
   }
 
-  .encabezado-izquierdo, 
-  .encabezado-logo, 
+  .encabezado-izquierdo,
+  .encabezado-logo,
   .encabezado-derecho {
     justify-content: center;
     text-align: center;
